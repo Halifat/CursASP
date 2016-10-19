@@ -1,0 +1,66 @@
+﻿@model curs.Models.KindWork
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KindWork</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberLicense)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberLicense)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateLicense)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateLicense)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpirationLicense)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpirationLicense)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceWork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceWork)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tax)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

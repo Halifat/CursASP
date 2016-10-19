@@ -1,0 +1,34 @@
+﻿@model curs.Models.Materials
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Materials</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Objects.NameObject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Objects.NameObject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.NameMaterial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock.NameMaterial)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

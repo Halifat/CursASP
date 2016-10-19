@@ -1,0 +1,74 @@
+﻿@model curs.Models.Objects
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Objects</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameObject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameObject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeneralConstractor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeneralConstractor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractConclusionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractConclusionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartUp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartUp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

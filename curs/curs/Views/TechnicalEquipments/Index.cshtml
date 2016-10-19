@@ -1,0 +1,59 @@
+﻿@model curs.Models.Filtration
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Новая запись", "Create")
+</p>
+<form method="get">
+    <div class="form-inline">
+        <label class="control-label">Название </label>
+        @Html.DropDownList("name", Model.Names as SelectList,
+                    htmlAttributes: new { @class = "form-control" })
+
+
+        <input type="submit" value="Фильтр" class="btn btn-default" />
+    </div>
+</form>
+<table class="table">
+    <tr>
+        <th>
+           // @Html.DisplayNameFor(model => model.Tech)
+        </th>
+        <th>
+           // @Html.DisplayNameFor(model => model.Tech.UseTech)
+        </th>
+        <th>
+          //  @Html.DisplayNameFor(model => model.Tech.DatePurchase.Date)
+        </th>
+        <th>
+          //  @Html.DisplayNameFor(model => model.Tech.Exploitation.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Tech) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameTech)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UseTech)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatePurchase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exploitation)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Подробнее", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+    </table>

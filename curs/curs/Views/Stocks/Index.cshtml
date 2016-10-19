@@ -1,0 +1,87 @@
+﻿@model IEnumerable<curs.Models.Stock>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameMaterial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Certificate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCertificate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Provider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpirationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameMaterial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReleaseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Manufacturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Certificate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCertificate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Provider)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpirationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Photo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
